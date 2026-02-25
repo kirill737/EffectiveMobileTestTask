@@ -201,17 +201,7 @@ int main() {
     serializeToBin(head, "outlet.out");
 
     head = deserializeFromBin("outlet.out");
-    serializeToText(head, "outlet.in");
-
-    ListNode* cur = head;
-    while (cur != nullptr) {
-        if (cur->rand)
-            std::cout << cur->data << " -> " << cur->rand->data << std::endl;
-        else
-            std::cout << cur->data << " -> nullptr" << std::endl;
-
-        cur = cur->next;
-    }
+    serializeToText(head, "outlet.txt");
 
     return 0;
 }
